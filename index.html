@@ -1,14 +1,102 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>www.PNFT.cz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111314">
+  <meta name="description" content="Vivere atque FruiT — prostor pro myšlenky, znalosti a společnou tvorbu.">
+  <title>Vivere atque FruiT</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body style="background:#0a0a0a;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;">
-  <div style="text-align:center">
-    <h1>www.PNFT.cz</h1>
-    <p>kde signál získává hodnotu</p>
-  </div>
+
+<body>
+  <header class="site-header">
+    <div class="crown" aria-hidden="true">♛</div>
+    <h1>Vivere <span>atque</span> FruiT</h1>
+    <p class="subtitle">MYŠLENKY · ZNALOSTI · TVORBA</p>
+    <p class="motto">50\50 · Společně tvoříme víc.</p>
+  </header>
+
+  <main>
+    <section class="shelf-frame" aria-label="Prostor Vivere atque FruiT">
+      <div class="shelves" id="shelves">
+
+        <article class="shelf">
+          <div class="shelf-icon" aria-hidden="true">⌂</div>
+          <h2>01. Domů</h2>
+          <p>Hlavní základna našeho projektu.</p>
+        </article>
+
+        <article class="shelf">
+          <div class="shelf-icon" aria-hidden="true">⌘</div>
+          <h2>02. Znalosti</h2>
+          <p>Poznámky, dokumenty a odkazy.</p>
+        </article>
+
+        <article class="shelf">
+          <div class="shelf-icon" aria-hidden="true">⚙</div>
+          <h2>03. Nástroje</h2>
+          <p>Pomůcky, aplikace a budoucí AI.</p>
+        </article>
+
+        <article class="shelf">
+          <div class="shelf-icon" aria-hidden="true">◇</div>
+          <h2>04. Projekty</h2>
+          <p>Naše rozpracované nápady a tvorba.</p>
+        </article>
+
+        <article class="shelf">
+          <div class="shelf-icon" aria-hidden="true">♡</div>
+          <h2>05. Inspirace</h2>
+          <p>Myšlenky, objevy a nové směry.</p>
+        </article>
+
+        <button class="add-shelf" id="addShelf" type="button">
+          <span class="add-symbol" aria-hidden="true">＋</span>
+          <strong>Přidat novou polici</strong>
+          <small>Prostor pro další nápady.</small>
+        </button>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Vivere atque FruiT</strong>
+    <p>Od myšlenky k realitě.</p>
+    <p class="footer-note">Tvoříme společně. Rosteme postupně.</p>
+  </footer>
+
+  <dialog id="shelfDialog">
+    <form id="shelfForm">
+      <h2 id="dialogTitle">Nová police</h2>
+
+      <label class="field">
+        Název police
+        <input id="shelfName" maxlength="60" required
+               placeholder="Např. Laboratoř nápadů">
+      </label>
+
+      <label class="field">
+        Popis
+        <input id="shelfDescription" maxlength="180"
+               placeholder="Co zde budeme uchovávat?">
+      </label>
+
+      <label class="field">
+        Symbol
+        <input id="shelfIcon" maxlength="8" value="✦">
+      </label>
+
+      <div class="dialog-actions">
+        <button class="primary" type="submit">Uložit polici</button>
+        <button class="secondary" id="cancelDialog" type="button">
+          Zrušit
+        </button>
+      </div>
+    </form>
+  </dialog>
 </body>
 </html>
